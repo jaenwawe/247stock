@@ -5,7 +5,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class MovieData {
+public class productData {
 
     List<Map<String,?>> moviesList;
 
@@ -23,7 +23,7 @@ public class MovieData {
         } else return null;
     }
 
-    public MovieData(){
+    public productData(){
         String description;
 		String length;
 		String year;
@@ -295,16 +295,6 @@ public class MovieData {
         return movie;
     }
 
-	public void removeItem(int position) {
-		moviesList.remove(position);
-	}
-
-/*	public void addItem(int position, HashMap clone) {
-		HashMap item =  (HashMap) moviesList.get(position);
-		HashMap cloned = (HashMap) item.clone();
-		moviesList.add((position + 1), cloned);
-	}*/
-
 	public void addItem(int position) {
 
 		HashMap item =  (HashMap) moviesList.get(position);
@@ -322,19 +312,3 @@ public class MovieData {
 		}
 	}
 
-/*
-
-Button buttonSelect = (Button) rootView.findViewById(R.id.button_select);
-buttonSelect.setOnClickListener(new View.OnClickListener() {
-public void onClick(View v) {
-		//set all selection to false
-		//notify adapter of change
-
-		for(int i = 0; i <(movieList.size() ); i++) {
-		HashMap<String, Boolean> mData = (HashMap<String, Boolean>) movieList.get(i);
-		//get each hashmap out set attibute
-		mData.put("selection", true);
-		}
-		mRecyclerViewAdapter.notifyDataSetChanged();
-
-		}});*/
