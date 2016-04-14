@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+tools:context="jaenwawe.miniInventory.MainActivity">
+
+    <item android:id="@+id/action_bluetooth"
+        android:orderInCategory="101"
+        app:showAsAction="always"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:icon="@drawable/bluetooth"
+        android:title="Blue Tooth"
+        />
+
+    <item android:id="@+id/action_blue_share"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:orderInCategory="110"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:icon="@drawable/green_share"
+        android:title="Share"
+        app:showAsAction="always"
+        app:actionProviderClass="android.support.v7.widget.ShareActionProvider"/>
+
+
+<item android:id="@+id/action_setting"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:icon="@drawable/help"
+    android:title="@string/help1"
+    app:showAsAction="never"/>
+
+</menu>

@@ -1,0 +1,58 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/fragment_front_page"
+    tools:context="jaenwawe.miniInventory.Fragment_FrontPage"
+
+    android:background="#4CAF50">
+
+    <!-- TODO: Update blank fragment layout -->
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+android:orientation="vertical"
+    android:weightSum="3">
+
+
+    <Button
+        android:layout_width="119dp"
+        android:layout_height="34dp"
+        android:text="@string/aboutme"
+        android:layout_marginTop="100dp"
+        android:layout_marginBottom="80dp"
+        android:layout_weight="0.19"
+        android:id="@+id/front_button1"
+
+        android:layout_gravity="center_horizontal"
+        android:background="#C8E6C9" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="119dp"
+        android:layout_height="34dp"
+        android:layout_marginBottom="80dp"
+        android:text="@string/recycleview"
+        android:id="@+id/front_button2"
+        android:layout_gravity="center_horizontal"
+        android:layout_weight="0.19"
+        android:background="#C8E6C9" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="119dp"
+        android:layout_height="34dp"
+
+        android:layout_marginBottom="80dp"
+        android:text="@string/masterDetail"
+        android:id="@+id/front_button3"
+        android:layout_gravity="center_horizontal"
+        android:layout_weight="0.19"
+        android:background="#C8E6C9" />
+
+
+</LinearLayout>
+
+
+</RelativeLayout>

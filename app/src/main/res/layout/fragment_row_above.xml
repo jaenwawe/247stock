@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.v7.widget.CardView
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:id="@+id/cardview"
+    android:layout_gravity="center"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    card_view:cardCornerRadius="5dp"
+    android:layout_margin="5dp">
+
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:id="@+id/fragment_row_above"
+    android:layout_height="match_parent"
+    android:weightSum="1">
+
+
+
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/list_selector1"
+        android:weightSum="1">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="While Frodo and Sam edge closer to Mordor with the help of the shifty Gollum, the divided fellowship makes a stand against Sauron's new ally, Saruman, and his hordes of Isengard."
+            android:textSize="12dp"
+            android:id="@+id/description"
+            android:layout_below="@+id/title"
+            android:layout_alignParentStart="true"
+            android:layout_toRightOf="@id/selection"
+            android:paddingRight="5dp"
+            android:paddingBottom="5dp"
+            android:layout_toStartOf="@+id/icon" />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/selection"
+            android:checked="false"
+            android:paddingRight="15dp"
+
+
+            android:layout_alignParentTop="true"
+            android:layout_toEndOf="@+id/list_selector" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:id="@+id/title"
+            android:layout_toLeftOf="@+id/icon"
+            android:layout_toRightOf="@id/selection"
+            android:text="Star Wars"
+            android:textSize="20dp"
+            android:weightSum="3"
+            android:layout_gravity="center_horizontal"
+            android:paddingBottom="5dp"
+
+            android:layout_alignParentTop="true"
+             />
+
+        <LinearLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:id="@+id/list_selector"/>
+
+        <ImageView  android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:src="@drawable/star_wars1"
+            android:scaleType="fitXY"
+            android:id="@+id/icon"
+            android:weightSum="1"
+            android:layout_gravity="right"
+            android:layout_below="@+id/list_selector"
+            android:layout_alignParentEnd="true" />
+
+    </RelativeLayout>
+
+</LinearLayout>
+</android.support.v7.widget.CardView>

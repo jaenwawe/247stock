@@ -1,0 +1,67 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    android:id="@+id/fragment_list"
+    tools:context=".Fragment_List"
+    android:background="#E8F5E9">
+
+
+    <Button
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:text="Avatar"
+        android:id="@+id/button1"
+        android:layout_marginTop="40dp"
+
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:background="#66BB6A" />
+
+    <Button
+        android:layout_width="121dp"
+        android:layout_height="wrap_content"
+        android:text="Titanic"
+        android:id="@+id/button2"
+        android:layout_marginTop="40dp"
+
+        android:layout_alignStart="@+id/button5"
+        android:layout_gravity="center"
+        android:background="#66BB6A" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="The Dark Knight"
+        android:id="@+id/button3"
+
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+    android:layout_gravity="center_horizontal"
+        android:background="#66BB6A" />
+
+    <Button
+        android:layout_width="122dp"
+        android:layout_height="wrap_content"
+        android:text="Star Wars I"
+        android:id="@+id/button4"
+
+
+        android:layout_marginTop="40dp"
+        android:layout_gravity="center_horizontal"
+        android:allowUndo="true"
+        android:background="#66BB6A" />
+
+    <Button
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:text="Star Wars IV"
+        android:id="@+id/button5"
+        android:layout_marginTop="40dp"
+        android:layout_gravity="center_horizontal|top"
+        android:background="#66BB6A" />
+
+
+</LinearLayout>
+

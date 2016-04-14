@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">miniInventory</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="select_all">SELECT ALL</string>
+    <string name="clear_all">CLEAR ALL</string>
+    <string name="delete">DELETE</string>
+    <string name="recycleview">Recycle View</string>
+    <string name="aboutme">About Me</string>
+    <string name="masterDetail">Master Detail</string>
+    <string name="help1">Help</string>
+    <string name="openDrawer">Open Drawer</string>
+    <string name="closeDrawer">Close Drawer</string>
+    <string name="action_search">Search</string>
+
+</resources>

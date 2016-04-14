@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.v7.widget.CardView
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:id="@+id/cardview"
+    android:layout_gravity="center"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    card_view:cardCornerRadius="5dp"
+    android:layout_margin="5dp">
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:id="@+id/list_selector1"
+    android:weightSum="1">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/title"
+        android:text="Star Wars"
+        android:textSize="20dp"
+        android:paddingBottom="5dp"
+        android:textIsSelectable="true"
+        android:layout_below="@+id/list_selector"
+        android:layout_alignStart="@+id/description"
+        android:layout_toStartOf="@+id/selection" />
+
+    <TextView
+        android:layout_width="95dp"
+        android:layout_height="wrap_content"
+        android:text="While Frodo and Sam edge closer to Mordor with the help of the shifty Gollum, the divided fellowship makes a stand against Sauron's new ally, Saruman, and his hordes of Isengard."
+        android:textIsSelectable="true"
+        android:textSize="12dp"
+        android:paddingBottom="5dp"
+
+        android:id="@+id/description"
+        android:layout_weight="1.78"
+        android:layout_alignParentEnd="true"
+        android:layout_toEndOf="@+id/icon"
+        android:layout_below="@+id/selection" />
+
+    <ImageView  android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginRight="5dp"
+        android:src="@drawable/star_wars1"
+        android:scaleType="fitXY"
+        android:id="@+id/icon"
+        android:weightSum="1"
+        android:layout_centerVertical="true"
+        android:layout_alignParentStart="true" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/selection"
+        android:checked="false"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true" />
+</RelativeLayout>
+
+</android.support.v7.widget.CardView>
