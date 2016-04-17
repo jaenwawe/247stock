@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:id="@+id/container_recyclerview"
-    tools:context="jaenwawe.miniInventory.ActivityRecyclerViewVone">
+    tools:context="jaenwawe.miniInventory.ActivityRecyclerView">
 
     <android.support.v7.widget.Toolbar
         android:id="@+id/toolbar_recyclerview"

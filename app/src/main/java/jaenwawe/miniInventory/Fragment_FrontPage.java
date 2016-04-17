@@ -56,7 +56,7 @@ public class Fragment_FrontPage extends Fragment {
                 button2.setOnClickListener(new View.OnClickListener() {
                     public void onClick(View v) {
                         //load name of class
-                        Intent intent = new Intent(getActivity(), ActivityRecyclerViewVone.class);
+                        Intent intent = new Intent(getActivity(), ActivityRecyclerView.class);
                         startActivity(intent);
             }
         });

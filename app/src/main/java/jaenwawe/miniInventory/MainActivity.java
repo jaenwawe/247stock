@@ -18,9 +18,10 @@ public class MainActivity extends AppCompatActivity implements Fragment_FrontPag
     private Toolbar toolbar;
     private NavigationView navigationView;
     private DrawerLayout drawerLayout;
-    private MenuItem menuItem1;
-    private MenuItem menuItem2;
-    private MenuItem menuItem3;
+    private MenuItem menuItemAboutMe;
+    private MenuItem menuItemonHand;
+    private MenuItem menuItemPending;
+    private MenuItem menuItemUnordered;
     private ActionBarDrawerToggle actionBarDrawerToggle;
 
     public void onFragmentInteraction(int fragment) {
@@ -47,8 +48,11 @@ public class MainActivity extends AppCompatActivity implements Fragment_FrontPag
         setSupportActionBar(toolbar);
 
         //items activity_navigation_drawer.xml
-        menuItem1 = (MenuItem) findViewById(R.id.item1);
-        menuItem2 = (MenuItem) findViewById(R.id.item2);
+        menuItemAboutMe = (MenuItem) findViewById(R.id.itemAboutMe);
+        menuItemonHand = (MenuItem) findViewById(R.id.itemOnHand);
+        menuItemPending = (MenuItem) findViewById(R.id.itemInventoryPending);
+        menuItemUnordered = (MenuItem) findViewById(R.id.itemInventoryUnordered);
+
 
         navigationView = (NavigationView) findViewById(R.id.navigation_view);
         navigationView.setNavigationItemSelectedListener(this);
@@ -112,17 +116,31 @@ public class MainActivity extends AppCompatActivity implements Fragment_FrontPag
         int id = item.getItemId();
 
         switch (id) {
-            case R.id.item1:
+            case R.id.itemAboutMe:
                 getSupportFragmentManager().beginTransaction()
                         .replace(R.id.container_main_nav, Fragment_AboutMe.newInstance("1", "2"))
                         .addToBackStack(null)
                         .commit();
                 break;
-            case R.id.item2:
+            case R.id.itemOnHand:
 
-                Intent intent = new Intent(getApplicationContext(), ActivityRecyclerViewVone.class);
-                startActivity(intent);
+                Intent intentOnHand = new Intent(getApplicationContext(), ActivityRecyclerView.class);
+                startActivity(intentOnHand);
                 break;
+
+            case R.id.itemInventoryPending:
+
+                Intent intentInventoryPending = new Intent(getApplicationContext(), ActivityRecyclerView.class);
+                startActivity(intentInventoryPending );
+                break;
+
+
+            case R.id.itemInventoryUnordered:
+
+                Intent intentInventoryUnOrdered = new Intent(getApplicationContext(), ActivityRecyclerView.class);
+                startActivity(intentInventoryUnOrdered);
+                break;
+
 
             default:
                 getSupportFragmentManager().beginTransaction()

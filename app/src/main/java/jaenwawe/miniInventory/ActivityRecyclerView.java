@@ -9,19 +9,19 @@ import android.view.View;
 
 import java.util.HashMap;
 
-public class ActivityRecyclerViewVone extends AppCompatActivity implements FragmentRecyclerView.OnRowClick {
+public class ActivityRecyclerView extends AppCompatActivity implements FragmentRecyclerView.OnRowClick {
 
     private Toolbar toolbar;
     private SearchView search;
     RecyclerView mRecyclerView;
-    MovieData movieData;
+    ProductData productData;
 
   @Override
-    public void onItemSelected (HashMap<String, ?> movie, View sharedImage) {
+    public void onItemSelected (HashMap<String, ?> Product, View sharedImage) {
 
-        movieData = new MovieData();
+        productData = new ProductData();
         getSupportFragmentManager().beginTransaction()
-                .replace(R.id.framelayout_container_recyclerview, Fragment_MasterDetail.newInstance(movie, sharedImage))
+                .replace(R.id.framelayout_container_recyclerview, Fragment_MasterDetail.newInstance(Product, sharedImage))
                 .addToBackStack(null)
                 .commit();
     }

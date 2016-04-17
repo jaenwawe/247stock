@@ -67,8 +67,8 @@ public class MyRecyclerViewAdapter extends RecyclerView.Adapter<MyRecyclerViewAd
 
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
-        Map<String, ?> movie = mDataset.get(position);
-        holder.bindMovieData(movie);
+        Map<String, ?> Product = mDataset.get(position);
+        holder.bindProductData(Product);
     }
 
     @Override
@@ -79,8 +79,8 @@ public class MyRecyclerViewAdapter extends RecyclerView.Adapter<MyRecyclerViewAd
     @Override
     public int getItemViewType(int position){
         int type;
-        double rating = (Double) mDataset.get(position).get("rating");
-        if (rating > 8)
+        double priceType = (Double) mDataset.get(position).get("price");
+        if (priceType > 8)
             type = 1;
         else type = 0;
 
@@ -93,11 +93,11 @@ public class MyRecyclerViewAdapter extends RecyclerView.Adapter<MyRecyclerViewAd
         public TextView vDescription;
         public CheckBox vCheckbox;
 
-        public void bindMovieData(Map<String, ?> movie) {
-            vTitle.setText((String) movie.get("name"));
-            vDescription.setText((String) movie.get("description"));
-            vIcon.setImageResource((Integer) movie.get("image"));
-            vCheckbox.setChecked((Boolean) movie.get("selection"));
+        public void bindProductData(Map<String, ?> Product) {
+            vTitle.setText((String) Product.get("name"));
+            vDescription.setText((String) Product.get("description"));
+            vIcon.setImageResource((Integer) Product.get("image"));
+            vCheckbox.setChecked((Boolean) Product.get("selection"));
         }
 
         public ViewHolder(View v) {

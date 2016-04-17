@@ -13,7 +13,6 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.RatingBar;
 import android.widget.TextView;
 
@@ -21,18 +20,18 @@ import java.util.HashMap;
 
 public class Fragment_MasterDetail extends Fragment {
 
-    MovieData movieData = new MovieData();
-    ImageView movieImage;
-    TextView movieNameTV;
-    TextView movieDescTV;
-    TextView movieYearTV;
-    RatingBar movieRatingTV;
-    TextView movieStarsTV;
+    ProductData ProductData = new ProductData();
+    ImageView productImage;
+    TextView productNameTV;
+    TextView productWeightTV;
+    TextView productDescriptionTV;
+    TextView productPriceTV;
+    TextView productAISNTV;
 
     ShareActionProvider mShareActionProvider;
 
     int position = 0;
-    HashMap<String, ?> ARG_PARAM1 = (HashMap<String, ?>) movieData.getItem(position);
+    HashMap<String, ?> ARG_PARAM1 = (HashMap<String, ?>) ProductData.getItem(position);
     private static final String ARG_PARAM2 = "param2";
 
     public Fragment_MasterDetail() {
@@ -63,7 +62,7 @@ public class Fragment_MasterDetail extends Fragment {
 
                 Intent intentShare = new Intent(Intent.ACTION_SEND);
                 intentShare.setType("text/plain");
-                intentShare.putExtra(Intent.EXTRA_TEXT, (String) movieData.getItem(position).get("name"));
+                intentShare.putExtra(Intent.EXTRA_TEXT, (String) ProductData.getItem(position).get("name"));
                 startActivity(intentShare);
                 return true;
             }
@@ -75,41 +74,41 @@ public class Fragment_MasterDetail extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-        HashMap movie = (HashMap<String, ?>) getArguments().getSerializable(ARG_PARAM2);
+        HashMap Product = (HashMap<String, ?>) getArguments().getSerializable(ARG_PARAM2);
 
+        int imageId = (Integer) Product.get("image");
+        String productName = (String) Product.get("name");
+        String productAISN = (String) Product.get("aisn");
+        String productweight = (String) Product.get("weight");
+        String productDescription = (String) Product.get("description");
+        String productPrice = (String) Product.get("price").toString();
 
-        int imageId = (Integer) movie.get("image");
-        String movieName = (String) movie.get("name");
-        String movieYearString = (String) movie.get("year");
-        String movieDescString = (String) movie.get("description");
-        double movieRatingNum = (Double) movie.get("rating");
-        String movieStarsString = (String) movie.get("stars");
 
         View view = inflater.inflate(R.layout.fragment_master_detail, container, false);
 
         //configure xml objects
-        movieNameTV = (TextView) view.findViewById(R.id.movieTitle);
-        movieImage = (ImageView) view.findViewById(R.id.movieImage);
-        movieDescTV = (TextView) view.findViewById(R.id.movieDescription);
-        movieYearTV = (TextView) view.findViewById(R.id.movieYear);
-        movieRatingTV = (RatingBar) view.findViewById(R.id.ratingBar);
-        movieStarsTV = (TextView) view.findViewById(R.id.movieStars);
+        productNameTV = (TextView) view.findViewById(R.id.ProductName);
+        productImage = (ImageView) view.findViewById(R.id.ProductImage);
+        productPriceTV = (TextView) view.findViewById(R.id.ProductPrice);
+        productWeightTV = (TextView) view.findViewById(R.id.ProductWeight);
+        productDescriptionTV = (TextView) view.findViewById(R.id.ProductDescription);
+        productAISNTV = (TextView) view.findViewById(R.id.ProductAISN);
 
-        //set XML objects to values in MovieData hashmap
-        movieNameTV.setText(movieName);
-        movieImage.setImageResource(imageId);
-        movieDescTV.setText(movieDescString);
-        movieYearTV.setText(movieYearString);
-        movieRatingTV.setRating((float) (movieRatingNum / 2));
-        movieStarsTV.setText(movieStarsString);
+        //set XML objects to values in productData hashmap
+        productNameTV.setText(productName);
+        productAISNTV.setText(productAISN);
+        productDescriptionTV.setText(productDescription);
+        productWeightTV.setText(productweight);
+        productPriceTV.setText((productPrice.toString()));
+        productImage.setImageResource(imageId);
 
         return view;
     }
 
-    public static Fragment_MasterDetail newInstance(HashMap<String, ?> movie, View sharedImage) {
+    public static Fragment_MasterDetail newInstance(HashMap<String, ?> Product, View sharedImage) {
         Fragment_MasterDetail fragment = new Fragment_MasterDetail();
         Bundle args = new Bundle();
-        args.putSerializable(ARG_PARAM2, movie);
+        args.putSerializable(ARG_PARAM2, Product);
         fragment.setArguments(args);
         return fragment;
     }

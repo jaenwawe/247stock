@@ -7,14 +7,12 @@ import android.support.v4.view.MenuItemCompat;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.SearchView;
-import android.view.ActionMode;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.PopupMenu;
 import android.widget.Toast;
 
 import java.util.HashMap;
@@ -25,7 +23,7 @@ import java.util.HashMap;
  */
 public class FragmentRecyclerView extends Fragment {
     RecyclerView mRecyclerView; //Jae added
-    MovieData movieData; //Jae Added to accomplish pg 19
+    ProductData productData; //Jae Added to accomplish pg 19
 
     private OnRowClick mDetailViewListener;
 
@@ -43,7 +41,7 @@ public class FragmentRecyclerView extends Fragment {
     }
 
     public interface OnRowClick {
-        void onItemSelected(HashMap<String, ?> movie, View sharedImage);
+        void onItemSelected(HashMap<String, ?> Product, View sharedImage);
         //void onItemClick(View v, int position);
     }
 
@@ -64,7 +62,7 @@ public class FragmentRecyclerView extends Fragment {
         setHasOptionsMenu(true);
         setRetainInstance(true);
 
-        movieData = new MovieData();
+        productData = new ProductData();
     }
 
     @Override
@@ -80,7 +78,7 @@ public class FragmentRecyclerView extends Fragment {
             search.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
                 @Override
                 public boolean onQueryTextSubmit(String query){
-                    int position = movieData.findFirst(query);
+                    int position = productData.findFirst(query);
                     System.out.println("Found! :" + position);
                     if(position >= 0)
                         mRecyclerView.scrollToPosition(position);
@@ -122,8 +120,8 @@ public class FragmentRecyclerView extends Fragment {
         mLayoutManager = new LinearLayoutManager((getActivity()));
         mRecyclerView.setLayoutManager(mLayoutManager);
 
-        //bind MovieData populate cards in the current activity
-        mRecyclerViewAdapter = new MyRecyclerViewAdapter(getActivity(), movieData.getMoviesList());
+        //bind productData populate cards in the current activity
+        mRecyclerViewAdapter = new MyRecyclerViewAdapter(getActivity(), productData.getProductList());
         mRecyclerView.setAdapter(mRecyclerViewAdapter);
 
         mRecyclerViewAdapter.setOnItemClickListener(new MyRecyclerViewAdapter.OnItemClickListener() {
@@ -131,7 +129,7 @@ public class FragmentRecyclerView extends Fragment {
             @Override
             public void onItemClick(View v, int position) {
                 //return control to Activity
-                mDetailViewListener.onItemSelected(movieData.getItem(position), v);
+                mDetailViewListener.onItemSelected(productData.getItem(position), v);
             }
             @Override
             public void onItemLongClick(View v, int position) {

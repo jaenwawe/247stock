@@ -12,4 +12,12 @@
     <color name="colorPrimaryB">#F3030F</color>
     <color name="colorAccentB">#FF3F9C</color>
     <color name="colorPrimaryDarkB">#34408F</color>
+
+    <color name="background">#C8E6C9</color>
+    <color name="buttons">#81C784</color>
+    <color name="font">#1B5E20</color>
+
+    <color name="black">#000000</color>
+
+
 </resources>

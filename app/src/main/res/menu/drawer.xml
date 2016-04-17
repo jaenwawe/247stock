@@ -1,18 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
+    menuItemAboutMe = (MenuItem) findViewById(R.id.);
+    menuItemonHand = (MenuItem) findViewById(R.id.);
+    menuItemPending = (MenuItem) findViewById(R.id.);
+    menuItemUnordered = (MenuItem) findViewById(R.id.);
 
-
-    <item android:id="@+id/item1"
+    <item android:id="@+id/itemAboutMe"
         android:checked="false"
         android:title="About Me"
         android:icon="@drawable/avatarjae"
         />
 
-    <item android:id="@+id/item2"
+    <item android:id="@+id/itemOnHand"
         android:checked="false"
         android:title="RecyleView Activity"
-        android:icon="@drawable/ic_open"
+        android:icon="@drawable/boxes"
+        />
+
+
+    <item android:id="@+id/itemInventoryPending"
+        android:checked="false"
+        android:title="RecyleView Activity"
+        android:icon="@drawable/delivery"
+        />
+
+
+    <item android:id="@+id/itemInventoryUnordered"
+        android:checked="false"
+        android:title="RecyleView Activity"
+        android:icon="@drawable/greenbox"
         />
 
 

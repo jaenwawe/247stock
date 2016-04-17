@@ -3,17 +3,26 @@
     android:orientation="vertical"
     android:layout_height="match_parent"
     android:layout_width="match_parent"
+    android:background="@drawable/green"
     android:layout_gravity="center_horizontal"
     android:id="@+id/fragment_master_detail"
     tools:context="jaenwawe.miniInventory5.Fragment_MasterDetail"
-    android:background="#E8F5E9">
+  >
+
+    productNameTV = (TextView) view.findViewById(R.id.);
+    productImage = (ImageView) view.findViewById(R.id.);
+    productPriceTV = (TextView) view.findViewById(R.id.ProductPrice);
+    productWeightTV = (TextView) view.findViewById(R.id.);
+    productDescriptionTV = (TextView) view.findViewById(R.id.);
+    productAISNTV = (TextView) view.findViewById(R.id.);
+
 
     <!-- TODO: Update blank fragment layout -->
     <TextView
         android:layout_height="wrap_content"
         android:layout_width="wrap_content"
         android:text="Title"
-        android:id="@+id/movieTitle"
+        android:id="@+id/ProductName"
         android:layout_gravity="center_horizontal"
         android:textSize="15sp" />
 
@@ -22,33 +31,40 @@
         android:layout_width="150dp"
         android:layout_gravity="center_horizontal"
         android:padding="@dimen/activity_vertical_margin"
-        android:id="@+id/movieImage" />
+        android:id="@+id/ProductImage" />
 
     <TextView
         android:layout_height="wrap_content"
         android:layout_width="match_parent"
         android:text="Description"
-        android:id="@+id/movieDescription"
+        android:id="@+id/ProductDescription"
         android:layout_gravity="center_horizontal" />
 
-    <TextView
-        android:layout_height="wrap_content"
-        android:layout_width="wrap_content"
-        android:id="@+id/movieStars"
-        android:text="MovieStars" />
 
     <TextView
         android:layout_height="wrap_content"
         android:layout_width="wrap_content"
-        android:id="@+id/movieYear"
-        android:text="MovieYEAR"
+        android:id="@+id/ProductWeight"
+        android:text="ProductWeight"
         android:layout_centerHorizontal="true" />
 
-    <RatingBar
-        android:layout_width="wrap_content"
+
+    <TextView
         android:layout_height="wrap_content"
-        android:id="@+id/ratingBar"
-        android:layout_centerHorizontal="true"
-        android:layout_marginEnd="56dp" />
+        android:layout_width="wrap_content"
+        android:id="@+id/ProductAISN"
+        android:text="ProductAISN"
+        android:layout_centerHorizontal="true" />
+
+
+
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:id="@+id/ProductPrice"
+        android:text="ProductPrice"
+        android:layout_centerHorizontal="true" />
+
+
 
 </LinearLayout>
