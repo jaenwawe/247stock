@@ -126,11 +126,6 @@ public class MainActivity extends AppCompatActivity implements Fragment_FrontPag
                 break;
             case R.id.itemOnHand:
 
-              /*  Intent intentOnHand = new Intent(getApplicationContext(), ActivityRecyclerView.class);
-                startActivity(intentOnHand);
-           */
-
-
                 Intent intentOnHand = new Intent(getApplicationContext(), Activity_ViewPager.class);
                 intentOnHand.putExtra(Intent.EXTRA_TEXT, (String) product.getItem(position).get("name"));
                 startActivity(intentOnHand);
@@ -143,13 +138,11 @@ public class MainActivity extends AppCompatActivity implements Fragment_FrontPag
                 startActivity(intentInventoryPending );
                 break;
 
-
             case R.id.itemInventoryUnordered:
 
                 Intent intentInventoryUnOrdered = new Intent(getApplicationContext(), ActivityRecyclerView.class);
                 startActivity(intentInventoryUnOrdered);
                 break;
-
 
             default:
                 getSupportFragmentManager().beginTransaction()
@@ -164,4 +157,3 @@ public class MainActivity extends AppCompatActivity implements Fragment_FrontPag
     }
 
 }
-

@@ -3,6 +3,8 @@ package jaenwawe.miniInventory;
 import android.animation.AnimatorInflater;
 import android.animation.AnimatorSet;
 import android.os.Bundle;
+import android.support.design.widget.FloatingActionButton;
+import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.SearchView;
@@ -12,6 +14,9 @@ import android.transition.Slide;
 import android.view.Gravity;
 import android.view.View;
 import android.widget.ImageButton;
+import android.support.design.widget.CoordinatorLayout;
+
+
 
 import java.util.HashMap;
 
@@ -33,7 +38,7 @@ public class ActivityRecyclerView extends AppCompatActivity implements FragmentR
       details.setExitTransition(new Fade());
       details.setSharedElementReturnTransition(new DetailsTransition());
       getSupportFragmentManager().beginTransaction()
-              .replace(R.id.framelayout_container_recyclerview, details)
+              .replace(R.id.container_recyclerview, details)
               .addToBackStack(null)
               .commit();
     }
@@ -48,6 +53,19 @@ public class ActivityRecyclerView extends AppCompatActivity implements FragmentR
         toolbar.setVisibility(View.VISIBLE);
         setSupportActionBar(toolbar);
 
+        android.support.design.widget.FloatingActionButton fab= (android.support.design.widget.FloatingActionButton) findViewById(R.id.fab);
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                CoordinatorLayout coordinatorLayout = (CoordinatorLayout) findViewById(R.id.container_recyclerview);
+                Snackbar snackbar = Snackbar
+                        .make(coordinatorLayout, "Need Help Call 212-810-1609", Snackbar.LENGTH_LONG);
+
+                snackbar.show();
+            }
+        });
+
+
         if (savedInstanceState == null) {
 
             FragmentRecyclerView fragment = FragmentRecyclerView.newInstance(0);
@@ -58,9 +76,10 @@ public class ActivityRecyclerView extends AppCompatActivity implements FragmentR
             set.start();
 
             getSupportFragmentManager().beginTransaction()
-                    .add(R.id.framelayout_container_recyclerview, fragment)
+                    .add(R.id.container_recyclerview, fragment)
                     .commit();
         }
+
     }
 
 
