@@ -12,7 +12,6 @@ public class Activity_MasterDetails extends AppCompatActivity {
     Fragment mFragment;
     ProductData product;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

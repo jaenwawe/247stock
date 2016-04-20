@@ -112,4 +112,12 @@ public class Fragment_MasterDetail extends Fragment {
         fragment.setArguments(args);
         return fragment;
     }
+
+    public static Fragment_MasterDetail newInstance(HashMap<String, ?> Product) {
+        Fragment_MasterDetail fragment = new Fragment_MasterDetail();
+        Bundle args = new Bundle();
+        args.putSerializable(ARG_PARAM2, Product);
+        fragment.setArguments(args);
+        return fragment;
+    }
 }

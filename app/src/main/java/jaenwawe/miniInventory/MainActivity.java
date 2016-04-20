@@ -23,6 +23,8 @@ public class MainActivity extends AppCompatActivity implements Fragment_FrontPag
     private MenuItem menuItemPending;
     private MenuItem menuItemUnordered;
     private ActionBarDrawerToggle actionBarDrawerToggle;
+    ProductData product = new ProductData();
+    int position = 0;
 
     public void onFragmentInteraction(int fragment) {
 //for task 2 and 3 load activities. n
@@ -124,8 +126,15 @@ public class MainActivity extends AppCompatActivity implements Fragment_FrontPag
                 break;
             case R.id.itemOnHand:
 
-                Intent intentOnHand = new Intent(getApplicationContext(), ActivityRecyclerView.class);
+              /*  Intent intentOnHand = new Intent(getApplicationContext(), ActivityRecyclerView.class);
                 startActivity(intentOnHand);
+           */
+
+
+                Intent intentOnHand = new Intent(getApplicationContext(), Activity_ViewPager.class);
+                intentOnHand.putExtra(Intent.EXTRA_TEXT, (String) product.getItem(position).get("name"));
+                startActivity(intentOnHand);
+
                 break;
 
             case R.id.itemInventoryPending:

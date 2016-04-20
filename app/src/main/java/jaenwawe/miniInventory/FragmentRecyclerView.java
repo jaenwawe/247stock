@@ -61,7 +61,6 @@ public class FragmentRecyclerView extends Fragment {
         super.onCreate(savedInstanceState);
         setHasOptionsMenu(true);
         setRetainInstance(true);
-
         productData = new ProductData();
     }
 

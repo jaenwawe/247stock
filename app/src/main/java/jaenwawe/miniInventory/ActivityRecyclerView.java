@@ -26,13 +26,12 @@ public class ActivityRecyclerView extends AppCompatActivity implements FragmentR
   @Override
   public void onItemSelected(HashMap<String, ?> product, View sharedImage) {
 
-        productData = new ProductData();
+      productData = new ProductData();
       Fragment_MasterDetail details = Fragment_MasterDetail.newInstance(product, sharedImage);
       details.setSharedElementEnterTransition(new DetailsTransition());
       details.setEnterTransition(new Fade());
       details.setExitTransition(new Fade());
       details.setSharedElementReturnTransition(new DetailsTransition());
-
       getSupportFragmentManager().beginTransaction()
               .replace(R.id.framelayout_container_recyclerview, details)
               .addToBackStack(null)
