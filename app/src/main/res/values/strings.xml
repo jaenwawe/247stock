@@ -24,4 +24,10 @@
     <string name="login">Login Here</string>
 
 
+    <string name="viewPager">ViewPager Activity</string>
+    <string name="recycleView">RecyleView Activity</string>
+
+
+
+
 </resources>

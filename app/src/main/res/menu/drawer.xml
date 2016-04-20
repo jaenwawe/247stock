@@ -6,33 +6,31 @@
     menuItemPending = (MenuItem) findViewById(R.id.);
     menuItemUnordered = (MenuItem) findViewById(R.id.);
 
-    <item android:id="@+id/itemAboutMe"
+    <item
+        android:id="@+id/itemAboutMe"
         android:checked="false"
-        android:title="About Me"
         android:icon="@drawable/avatarjae"
-        />
+        android:title="About Me" />
 
-    <item android:id="@+id/itemOnHand"
+    <item
+        android:id="@+id/itemOnHand"
         android:checked="false"
-        android:title="RecyleView Activity"
         android:icon="@drawable/boxes"
-        />
+        android:title="@string/viewPager" />
 
 
-    <item android:id="@+id/itemInventoryPending"
+    <item
+        android:id="@+id/itemInventoryPending"
         android:checked="false"
-        android:title="RecyleView Activity"
         android:icon="@drawable/delivery"
-        />
+        android:title="@string/recycleView" />
 
 
-    <item android:id="@+id/itemInventoryUnordered"
+    <item
+        android:id="@+id/itemInventoryUnordered"
         android:checked="false"
-        android:title="RecyleView Activity"
         android:icon="@drawable/greenbox"
-        />
-
-
+        android:title="@string/recycleView" />
 
 
 </menu>
