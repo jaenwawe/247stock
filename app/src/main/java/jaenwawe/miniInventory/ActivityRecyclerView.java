@@ -3,7 +3,7 @@ package jaenwawe.miniInventory;
 import android.animation.AnimatorInflater;
 import android.animation.AnimatorSet;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
+import android.support.design.widget.CoordinatorLayout;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.RecyclerView;
@@ -14,9 +14,6 @@ import android.transition.Slide;
 import android.view.Gravity;
 import android.view.View;
 import android.widget.ImageButton;
-import android.support.design.widget.CoordinatorLayout;
-
-
 
 import java.util.HashMap;
 
@@ -48,11 +45,11 @@ public class ActivityRecyclerView extends AppCompatActivity implements FragmentR
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_recycler_view);
 
-        toolbar = (Toolbar) findViewById(R.id.toolbar_recyclerview);
+        // toolbar = (Toolbar) findViewById(R.id.toolbar_recyclerview);
         //initialize toolbar as actionbar
-        toolbar.setVisibility(View.VISIBLE);
-        setSupportActionBar(toolbar);
-
+        //toolbar.setVisibility(View.VISIBLE);
+        //setSupportActionBar(toolbar);
+        
         android.support.design.widget.FloatingActionButton fab= (android.support.design.widget.FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override

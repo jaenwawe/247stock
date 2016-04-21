@@ -1,7 +1,7 @@
 package jaenwawe.miniInventory;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 
 public class ActivityCoordinatorLayout extends AppCompatActivity {
 
@@ -10,4 +10,6 @@ public class ActivityCoordinatorLayout extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_coordinator_layout);
     }
+
+
 }
